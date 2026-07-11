@@ -24,7 +24,7 @@ document.querySelectorAll(".project-image").forEach(gallery => {
         const dot = document.createElement("span");
         dot.classList.add("dot");
 
-        if(i === 0)
+        if (i === 0)
             dot.classList.add("active");
 
         dot.addEventListener("click", () => {
@@ -41,7 +41,7 @@ document.querySelectorAll(".project-image").forEach(gallery => {
 
     const dots = dotsContainer.querySelectorAll(".dot");
 
-    function show(i){
+    function show(i) {
 
         images.forEach(img => img.classList.remove("active"));
         dots.forEach(dot => dot.classList.remove("active"));
@@ -51,21 +51,21 @@ document.querySelectorAll(".project-image").forEach(gallery => {
 
     }
 
-    function next(){
+    function next() {
 
         index = (index + 1) % images.length;
         show(index);
 
     }
 
-    function previous(){
+    function previous() {
 
         index = (index - 1 + images.length) % images.length;
         show(index);
 
     }
 
-    function restartTimer(){
+    function restartTimer() {
 
         clearInterval(timer);
         timer = setInterval(next, 3500);
@@ -86,12 +86,21 @@ document.querySelectorAll(".project-image").forEach(gallery => {
 
     });
 
-    gallery.addEventListener("mouseenter", restartTimer);
-
-    gallery.addEventListener("mouseleave", () => {
+    // Pause when hovering over the image
+    gallery.addEventListener("mouseenter", () => {
 
         clearInterval(timer);
 
     });
+
+    // Resume when leaving
+    gallery.addEventListener("mouseleave", () => {
+
+        restartTimer();
+
+    });
+
+    // Start the slideshow immediately
+    restartTimer();
 
 });
