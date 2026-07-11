@@ -252,6 +252,179 @@ nav a:hover {
     transform: translateY(-3px);
 }
 
+/* End Intro */
+
+/* Fav Projects */
+
+#fav-projects {
+    min-height: 100vh;
+
+    padding: 100px 60px;
+
+    background: #111;
+}
+
+
+#fav-projects h2 {
+    text-align: center;
+    font-size: 2.5rem;
+
+    margin-bottom: 50px;
+}
+
+/* Project card */
+
+.project-card {
+
+    display: flex;
+
+    max-width: 1000px;
+     margin: 0 auto 50px auto;
+
+    background: rgba(30,30,30,0.8);
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+
+.project-card > img {
+
+    width: 45%;
+
+    object-fit: cover;
+
+}
+
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+ 
+.projects-list .project-card:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+/* Text side */
+
+.project-content {
+
+    width: 55%;
+
+    padding: 40px;
+
+    display:flex;
+    flex-direction:column;
+
+}
+
+
+.project-content h3 {
+
+    font-size:2rem;
+
+    margin-bottom:20px;
+
+}
+
+
+/* Tags */
+
+.project-tags {
+
+    display:flex;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:25px;
+
+}
+
+
+.project-tags span {
+
+    background:black;
+
+    padding:8px 15px;
+
+    border-radius:5px;
+
+    font-size:.9rem;
+
+}
+
+
+/* Description */
+
+.project-content p {
+
+    color:#ddd;
+
+    line-height:1.7;
+
+    margin-bottom:30px;
+
+}
+
+
+/* Buttons */
+
+.project-buttons {
+
+    display:flex;
+
+    gap:20px;
+
+    margin-top:auto;
+
+}
+
+/* End Fav Projects */
+
+/* Footer */
+
+footer {
+    background: #0b0b0b;
+    border-top: 1px solid rgba(255,255,255,.08);
+
+    padding: 30px 60px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 40px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.footer-links a:hover {
+    color: #66b2ff;
+}
+
+/* End Footer */
+
 /* Mobile */
 
 @media (max-width: 768px) {
@@ -275,8 +448,35 @@ nav a:hover {
         gap: 15px;
         flex-wrap: wrap;
         justify-content: center;
+    } 
+
+    .project-card {
+
+        flex-direction:column;
+
+    }
+
+
+    .project-card > img {
+
+        width:100%;
+        height:300px;
+
+    }
+
+
+    .project-content {
+
+        width:100%;
+
+        padding:30px;
+
+    }
+
+    .footer-content{
+        flex-direction:column;
+        gap:20px;
+        text-align:center;
     }
 
 }
-
-/* End Intro */
