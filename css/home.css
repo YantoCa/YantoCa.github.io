@@ -292,14 +292,108 @@ nav a:hover {
     box-shadow: 0 20px 40px rgba(0,0,0,0.3);
 }
 
+/* Carasoul Image */
 
-.project-card > img {
-
+.project-image {
+    position: relative;
     width: 45%;
+    overflow: hidden;
+}
+
+.project-image img {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
 
     object-fit: cover;
 
+    opacity: 0;
+
+    transition: opacity .35s ease;
 }
+
+.project-image img.active {
+    opacity: 1;
+}
+
+/* Arrow */
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 42px;
+    height: 42px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(0,0,0,.6);
+    color: white;
+
+    cursor: pointer;
+
+    opacity: 0;
+
+    transition: .25s;
+
+    z-index: 2;
+}
+
+.left {
+    left: 15px;
+}
+
+.right {
+    right: 15px;
+}
+
+.project-image:hover .arrow {
+    opacity: 1;
+} 
+
+/* dots */
+
+.dots {
+
+    position: absolute;
+
+    bottom: 15px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    gap: 8px;
+
+    z-index: 2;
+}
+
+.dot {
+
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.45);
+
+    cursor: pointer;
+
+    transition: .25s;
+}
+
+.dot.active {
+
+    background: white;
+    transform: scale(1.2);
+
+}
+
+/**/
 
 .projects-list {
     display: flex;
@@ -403,24 +497,41 @@ footer {
     margin: auto;
 
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
-    gap: 40px;
+    gap: 30px;
+
+    text-align: center;
+    flex-wrap: wrap;
 }
 
 .footer-links {
     display: flex;
-    gap: 25px;
+    align-items: center;
 }
 
 .footer-links a {
     color: white;
     text-decoration: none;
     transition: .3s;
+
+    display: flex;
+    align-items: center;
 }
 
 .footer-links a:hover {
     color: #66b2ff;
+}
+
+/* Separator */
+.footer-links a:not(:last-child)::after {
+    content: "|";
+
+    color: rgba(255,255,255,.35);
+
+    margin: 0 15px;
+
+    pointer-events: none;
 }
 
 /* End Footer */
@@ -473,10 +584,8 @@ footer {
 
     }
 
-    .footer-content{
-        flex-direction:column;
-        gap:20px;
-        text-align:center;
-    }
+.footer-content {
+    justify-content: center;
+}
 
 }
