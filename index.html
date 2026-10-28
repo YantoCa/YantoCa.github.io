@@ -83,8 +83,8 @@
             <h2>Featured Projects</h2>
 
             <div class="projects-list">
-                <article class="project-card" >
-                    <!-- Project 1 -->
+                <!-- MAIN PROJECT CARD (Project 1 - Untouched) -->
+                <article class="project-card main-project-card" >
                     <div class="project-image">
                         <img src="assets/images/project-1-expanded.jpg" class="active" alt="Titlecard">
                         <img src="assets/images/project-1-b.jpg" alt="">
@@ -126,8 +126,8 @@
 
                 </article>
 
-                <article class="project-card">
-                      <!-- Project 2 -->
+                <!-- PROJECT 2 -->
+                <article class="project-card vertical-card">
                     <div class="project-image">
                         <img src="assets/images/project-2-a.jpg" class="active" alt="">
                         <img src="assets/images/project-2-b.jpg" alt="">
@@ -139,38 +139,33 @@
                         <div class="dots"></div>
                     </div>
 
-                    <div class="project-content">
+                    <div class="project-info-box">
+                        <div class="project-info-top">
+                            <h3>Dual Rasterizer</h3>
 
-                        <h3>Dual Rasterizer</h3>
+                            <div class="project-tags">
+                                <span>C++</span> 
+                                <span>SDL2</span>
+                            </div>
 
-                        <div class="project-tags">
-                            <span>C++</span> 
-                            <span>SDL2</span>
+                            <p class="project-desc">
+                                A custom rendering pipeline built in C++ and SDL2 combining software and hardware rendering.
+                            </p>
                         </div>
-
-                        <p>
-                            I developed a Dual Rasterizer combining both a software and hardware rendering pipeline.
-                            This project was an exercise for my Graphics Programming course, focusing on implementing core rendering techniques such as including transparency, texturing, normal mapping and basic lighting.
-                            The final result allows switching between both rendering methods at runtime.
-                        </p>
 
                         <div class="project-buttons">
-                            <a href="projects/project-one.html" class="btn primary">
+                            <a href="projects/project-two.html" class="btn primary">
                                 View Project
                             </a>
-                            <!--
-                            <a href="projects.html" class="btn secondary">
+                            <a href="#" class="btn secondary">
                                 Visit Page
                             </a>
-                            -->
                         </div>
-
                     </div>
-
                 </article>
 
-                <article class="project-card">
-                      <!-- Project 3 -->
+                <!-- PROJECT 3 -->
+                <article class="project-card vertical-card">
                     <div class="project-image">
                         <img src="assets/images/project-3-a.jpg" class="active" alt="Titlecard">
                         <img src="assets/images/project-3-c.jpg" alt="Game">
@@ -182,36 +177,33 @@
                         <div class="dots"></div>
                     </div>
 
-                    <div class="project-content">
+                    <div class="project-info-box">
+                        <div class="project-info-top">
+                            <h3>CoinHeist</h3>
 
-                        <h3>CoinHeist</h3>
+                            <div class="project-tags">
+                                <span>ASM 6502</span> 
+                                <span>Hardware</span>
+                            </div>
 
-                        <div class="project-tags">
-                            <span>ASM 6502</span> 
-                            <span>Hardware</span>
+                            <p class="project-desc">
+                                A NES game developed with a team of four using 6502 Assembly, focusing on strict hardware limitations.
+                            </p>
                         </div>
 
-                        <p>
-                            I was part of developing CoinHeist, a NES game created with a team of four using 6502 Assembly.
-                            This project focused on understanding and working within hardware limitations, requiring efficient programming and resource management.
-                        </p>
-
                         <div class="project-buttons">
-                            <a href="projects/project-one.html" class="btn primary">
+                            <a href="projects/project-three.html" class="btn primary">
                                 View Project
                             </a>
-
-                            <a href="https://github.com/LucyShortForLucas/NESSAN" class="btn secondary">
+                            <a href="https://github.com/LucyShortForLucas/NESSAN" class="btn secondary" target="_blank">
                                 Visit Page
                             </a>
                         </div>
-
                     </div>
-
                 </article>
 
-                <article class="project-card">
-                      <!-- Project 4 -->
+                <!-- PROJECT 4 -->
+                <article class="project-card vertical-card">
                     <div class="project-image">
                         <img src="assets/images/project-4-expanded.jpg" class="active" alt="Titlecard">
                         <img src="assets/images/project-4-a.jpg" alt="">
@@ -224,45 +216,32 @@
                         <div class="dots"></div>
                     </div>
 
-                    <div class="project-content">
+                    <div class="project-info-box">
+                        <div class="project-info-top">
+                            <h3>GiftShift</h3>
 
-                        <h3>GiftShift</h3>
+                            <div class="project-tags">
+                                <span>Unity</span> 
+                                <span>C#</span>
+                            </div>
 
-                        <div class="project-tags">
-                            <span>Unity</span> 
-                            <span>C#</span>
+                            <p class="project-desc">
+                                A cooperative studio project simulating professional workflows using Perforce and HacknPlan.
+                            </p>
                         </div>
 
-                        <p>
-                            My largest project to date, together with a team of six. 
-                            This project simulated a professional game studio environment, making it so we could experience a structured developemtn workflow.
-                            And using tools such as HacknPlan and Perforce. With this we gained experience in team collaboration, project management and working within a pipeline.
-                        </p>
-
                         <div class="project-buttons">
-                            <a href="projects/project-one.html" class="btn primary">
+                            <a href="projects/project-four.html" class="btn primary">
                                 View Project
                             </a>
-
-                            <a href="https://bruja-aprendiza.itch.io/gift-shift" class="btn secondary">
+                            <a href="https://bruja-aprendiza.itch.io/gift-shift" class="btn secondary" target="_blank">
                                 Visit Page
                             </a>
                         </div>
-
                     </div>
-
                 </article>
             </div>
         </section>
-
-        <!--
-            <section id="contact">
-                <h2>Contact Me</h2>
-                <p>
-                    Testing
-                </p>
-            </section>
-        -->
 
     </main>
 
