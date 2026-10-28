@@ -359,21 +359,30 @@ nav a:hover {
 
 .project-info-top h3 {
     font-size: 1.6rem;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
     color: white;
 }
 
-.project-info-top .project-tags span {
-    background: rgba(10, 10, 10, 0.9);
-    color: white;
+/* Standardized Project Tags Across Cards */
+.project-card .project-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.project-card .project-tags span {
+    background: black;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: .9rem;
 }
 
 /* Description paragraph inside vertical cards */
 .project-desc {
     color: #ddd;
     font-size: 0.95rem;
-    line-height: 1.5;
-    margin-top: 15px;
+    line-height: 1.7;
     margin-bottom: 25px;
 }
 
@@ -498,27 +507,7 @@ nav a:hover {
 .project-content h3 {
     font-size: 2rem;
 
-    margin-bottom: 20px;
-}
-
-/* Tags */
-
-.project-tags {
-    display: flex;
-
-    gap: 10px;
-
-    flex-wrap: wrap;
-}
-
-.project-tags span {
-    background: black;
-
-    padding: 8px 15px;
-
-    border-radius: 5px;
-
-    font-size: .9rem;
+    margin-bottom: 15px;
 }
 
 /* Description */
@@ -528,7 +517,7 @@ nav a:hover {
 
     line-height: 1.7;
 
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 /* Buttons */
