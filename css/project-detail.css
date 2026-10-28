@@ -47,13 +47,6 @@ body {
     margin-bottom: 10px;
 }
 
-.sub-heading {
-    font-size: 1.1rem;
-    margin-top: 25px;
-    margin-bottom: 12px;
-    color: #66b2ff;
-}
-
 .section-divider {
     width: 60px;
     border: 2px solid #66b2ff;
@@ -70,6 +63,7 @@ body {
     display: flex;
     gap: 15px;
     margin-top: 25px;
+    flex-wrap: wrap;
 }
 
 /* Bullet Lists */
@@ -102,12 +96,6 @@ body {
     position: absolute;
     left: 0;
     top: -2px;
-}
-
-.mini-tags span {
-    background: rgba(10, 10, 10, 0.8);
-    font-size: 0.85rem;
-    padding: 6px 12px;
 }
 
 /* RIGHT COLUMN (MEDIA GALLERY) STYLING */
@@ -184,4 +172,29 @@ body {
 .full-frame {
     width: 100%;
     aspect-ratio: 16 / 9;
+}
+
+/* MOBILE RESPONSIVE MEDIA QUERIES */
+
+@media (max-width: 1024px) {
+    .project-detail-container {
+        grid-template-columns: 1fr;
+        padding: 100px 20px 40px 20px;
+        gap: 30px;
+    }
+
+    .project-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .image-pair-row {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .detail-block {
+        padding: 20px;
+    }
 }
